@@ -1,6 +1,15 @@
+class Node
+    attr_accessor :next, :value
+
+    def initialize (value) 
+        @next = nil
+        @value = value
+    end
+end
+
 class List
     attr_reader :head
-    def initialize () 
+    def initialize 
         @head = nil
     end
 	
@@ -43,7 +52,7 @@ class List
 			count += 1
 			current = current.next
 		end
-		if (id < 0) || (id > count + 1)
+		if (id < 0 || id > count + 1)
 			puts "index out of bounds,cant insert"
 		elsif count == 0 and count != id -1
 			new_node = Node.new(value)
@@ -88,21 +97,11 @@ class List
 		elsif count == id - 1
 			current_next = current.next
 			current.next = current_next.next
-		elsif count
-		else puts "qweqw"
 		end
 	end
 end
 
 
-class Node
-    attr_accessor :next, :value
-
-    def initialize (value) 
-        @next = nil
-        @value = value
-    end
-end
 
 l = List.new
 puts l.count
