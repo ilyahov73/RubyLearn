@@ -15,40 +15,36 @@ class Configus
         elsif args.empty?
           @inner_hash[name]
         else
-          @inner_hash[name] = args # NOTICE: args is array
+          @inner_hash[name] = args 
         end
       end
     end
    
     def self.deep_merge(target, source)
-      # source.each_pair do |k, v|
-      source.inner_hash.each_pair do |k, v|
-        # tv = target[k]
-        tv = target.inner_hash[k]
-   
-        target.inner_hash[k] =
-          if tv.is_a?(InHash) && v.is_a?(InHash)
-            deep_merge(tv, v)
+      source.inner_hash.each_pair do |key, value|
+        current_pair = target.inner_hash[key]
+
+        target.inner_hash[key] =
+          if current_pair.is_a?(InHash) && value.is_a?(InHash)
+            deep_merge(current_pair, value)
           else
-            v
+            value
           end
       end
    
-      target
+      return target
     end
    
-    def self.config(environment, parent = nil, &block)
+    def self.config(environment, parent_environment = nil, &block)
       in_hash = InHash.new
       in_hash.instance_eval &block
    
       keys = in_hash.inner_hash.keys
       index = keys.find_index(environment)
    
-      if parent && environment
-        parent_hash = in_hash.inner_hash[parent]
+      if parent_environment && environment
+        parent_hash = in_hash.inner_hash[parent_environment]
         adopted_hash = in_hash.inner_hash[environment]
-        # merged_hash = deep_merge(parent_hash, adopted_hash)
-        # in_hash
         deep_merge(parent_hash, adopted_hash)
       elsif environment == keys[index]
         in_hash.inner_hash[environment]
