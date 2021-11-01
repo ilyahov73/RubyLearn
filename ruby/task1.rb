@@ -43,9 +43,9 @@ class Configus
       index = keys.find_index(environment)
    
       if parent_environment && environment
-        parent_hash = in_hash.inner_hash[parent_environment]
-        adopted_hash = in_hash.inner_hash[environment]
-        deep_merge(parent_hash, adopted_hash)
+        parent_environment_hash = in_hash.inner_hash[parent_environment]
+        environment_hash = in_hash.inner_hash[environment]
+        deep_merge(parent_environment_hash, environment_hash)
       elsif environment == keys[index]
         in_hash.inner_hash[environment]
       end
