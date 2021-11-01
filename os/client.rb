@@ -1,12 +1,12 @@
 require "socket"
 
-socket = UNIXSocket.new "/tmp/socket.sock"
+socket = UNIXSocket.new "socket.sock"
 
 puts "waiting for writing"
 
 socket.write gets
 
-while 1 do
+loop do
     puts "waiting for receive"
     puts socket.readline
 

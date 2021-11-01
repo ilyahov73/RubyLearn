@@ -1,12 +1,13 @@
 require "socket"
 
-server = UNIXServer.new '/tmp/socket.sock'
+File.delete('socket.sock') if File.exists? 'socket.sock'
+server = UNIXServer.new 'socket.sock'
 
-puts "==== Waiting for connection"
+puts "Connection accepting..."
 
 socket = server.accept
 
-while 1 do
+loop do
     puts "waiting for receive"
     puts socket.readline
 
