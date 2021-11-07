@@ -1,0 +1,24 @@
+button {
+    width: 100px;
+    height: 100px;
+    font: 400 50px system-ui;
+    background: #2da4d3;
+    color: white;
+}
+table {
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -160px;
+    margin-top: -160px;
+}
+p {
+    margin-top: 250px;
+    text-align: center;
+}
+
+a {
+    color: black;
+}
