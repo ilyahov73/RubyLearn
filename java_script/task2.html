@@ -7,18 +7,18 @@
     <script>
         function promise(){
             const promise1 = new Promise((resolve, reject) => {
-                setTimeout(() => {resolve("result1");}, 1000);
+                setTimeout(() => {resolve("success1");}, 1000);
             });
-            promise1.then(result1 => {console.log("success1"); },error1=> {console.log("error");});
+            promise1.then(result => {console.log(result); });
            
         }
 
         async function async_await(){
             const promise2 = new Promise((resolve, reject) => {
-                setTimeout(() => {resolve("result2");}, 1000);
+                setTimeout(() => {resolve("success2");}, 1000);
             });
             result = await promise2;
-            console.log("success2")
+            console.log(result)
         }
 
         function call_back(){
