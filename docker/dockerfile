@@ -1,0 +1,4 @@
+FROM alpine:3.14
+RUN apt-get update && apt-get install -y ruby
+COPY hello.rb .
+ENTRYPOINT ["ruby", "hello.rb"]
