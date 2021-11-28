@@ -1,0 +1,11 @@
+итого 36
+0 -rw-rw-r-- 1 ilya ilya    0 ноя 28 13:31 ls.txt
+4 drwx------ 3 ilya ilya 4096 ноя 28 04:29 snap
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Видео
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Документы
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Загрузки
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 28 13:16 Изображения
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Музыка
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Общедоступные
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Рабочий стол
+4 drwxr-xr-x 2 ilya ilya 4096 ноя 21 01:36 Шаблоны
