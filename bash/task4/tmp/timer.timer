@@ -1,0 +1,9 @@
+[Unit]
+
+[Timer]
+AccuracySec=1us
+OnCalendar=*:*:0/1
+Unit=timer.service
+
+[Install]
+WantedBy=timers.target

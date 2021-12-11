@@ -1,0 +1,8 @@
+[Unit]
+Description=write time every second
+
+[Service]
+Type=oneshot
+StartLimitBurst=0
+ExecStart=/home/ilya/RubyLearn/bash/task4/task4.sh
+

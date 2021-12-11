@@ -1,0 +1,3 @@
+zombie = fork{sleep 0.1}
+sleep(1000)
+Proces.wait pid
