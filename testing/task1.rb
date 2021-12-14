@@ -5,26 +5,19 @@ class Test_Class
 	    end
 	    
 	    def assert_eq(value1, value2)
-	    	if value1 == value2
-	    	    return "Passed"
-	    	end
-	    	return "Error"
+	    	return "Passed" if value1 == value2
+	    	"Error"
 	    end
 	    
 	    def assert_includes(array, element)
-	    	if array.include? element
-	    	    return "Passed"
-	    	end
-	    	return "Error"
+	    	return "Passed" if array.include?(element)
+		"Error"
 	    end
 	    
 	    def assert_exception
 	    	message = yield
-	    	if message == "Error"
-	    	    return "Passed"
-	    	elsif message == "Passed"
-	    	    return "Error" 
-	    	end
+	    	
+	    	message == "Error" ? "Passed" : "Error"
 	    end
     end
 end
