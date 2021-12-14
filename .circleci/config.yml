@@ -19,6 +19,7 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+      - cd -
       - ruby/bundle-install
 
 # Invoke jobs via workflows
