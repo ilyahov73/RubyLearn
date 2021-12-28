@@ -5,7 +5,7 @@ require_relative "responser.rb"
 require_relative "get_info.rb"
 require_relative "create_entity.rb"
 
-class GHGem
+class GitHubClient
   def self.get_info_about_user(name, password)
     uri = URI.parse("https://api.github.com/users/#{name}")
     request = Net::HTTP::Get.new(uri)
